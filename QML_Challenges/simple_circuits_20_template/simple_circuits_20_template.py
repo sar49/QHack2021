@@ -20,7 +20,7 @@ def simple_circuits_20(angle):
     """
     prob = 0.0
     # QHACK #
-
+#Hi
     # Step 1 : initalize a device
 
     # Step 2 : Create a quantum circuit and qnode
