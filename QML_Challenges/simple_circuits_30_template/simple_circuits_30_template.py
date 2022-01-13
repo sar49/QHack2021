@@ -23,10 +23,15 @@ def simple_circuits_30(angle):
     # QHACK #
 
     # Step 1 : initialize a device
-
+    num_wires = 1
+    dev = qml.device("default.qubit", wires = num_wires)
     # Step 2 : Create a quantum circuit and qnode
-
+    @qml.qnode(dev)
+    def my_quantum_function(in_angle):
+        qml.RY(in_angle, wires = 0)
+        return qml.expval(qml.PauliX(0))
     # Step 3 : Run the qnode
+    x_expectation = my_quantum_function(angle)
     # x_expectation = ?
 
     # QHACK #
